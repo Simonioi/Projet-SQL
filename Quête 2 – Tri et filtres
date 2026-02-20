@@ -1,0 +1,13 @@
+-- Sélectionne les véhicules du plus autonome au moins autonome
+SELECT marque, modele, type_vehicule, autonomie_km
+FROM vehicule
+ORDER BY autonomie_km DESC;
+-- Filtre sur la disponibilité et organise l'affichage géographiquement, puis par constructeur
+SELECT ville, marque, modele, type_vehicule
+FROM vehicule
+WHERE etat = 'disponible'
+ORDER BY ville ASC, marque ASC;
+-- Liste complète des clients triée par nom de famille
+SELECT nom, prenom, email
+FROM client
+ORDER BY nom ASC, prenom ASC;
