@@ -1,0 +1,14 @@
+SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat, ville
+FROM vehicule;
+
+SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, ville
+FROM vehicule
+WHERE etat = 'disponible';
+
+SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat
+FROM vehicule
+WHERE ville = 'Paris';
+
+SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat, ville
+FROM vehicule
+WHERE autonomie_km > 400;
