@@ -1,0 +1,12 @@
+SELECT marque, modele, type_vehicule, autonomie_km
+FROM vehicule
+ORDER BY autonomie_km DESC;
+
+SELECT ville, marque, modele, type_vehicule
+FROM vehicule
+WHERE etat = 'disponible'
+ORDER BY ville ASC, marque ASC;
+
+SELECT nom, prenom, email
+FROM client
+ORDER BY nom ASC, prenom ASC;
