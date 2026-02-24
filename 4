@@ -1,0 +1,14 @@
+SELECT COUNT(*) AS total_vehicules
+FROM vehicule;
+
+SELECT ville, COUNT(*) AS nb_vehicules
+FROM vehicule
+GROUP BY ville;
+
+SELECT AVG(autonomie_km) AS autonomie_moyenne
+FROM vehicule;
+
+SELECT c.id_client, c.nom, c.prenom, COUNT(l.id_location) AS nb_locations
+FROM client c
+LEFT JOIN location l ON c.id_client = l.id_client
+GROUP BY c.id_client, c.nom, c.prenom;
