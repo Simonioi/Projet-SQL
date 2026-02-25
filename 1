@@ -1,14 +1,18 @@
+-- Afficher toute la liste des véhicules
 SELECT id, marque, modele, energie, autonomie_km, etat, localisation
 FROM vehicule;
 
+-- Afficher uniquement les véhicules qui sont disponibles
 SELECT id, marque, modele, energie, autonomie_km, localisation
 FROM vehicule
 WHERE etat = 'Disponible';
 
+-- Lister les véhicules qui se trouvent à Strasbourg
 SELECT id, marque, modele, energie, autonomie_km, etat
 FROM vehicule
 WHERE localisation = 'Strasbourg';
 
+-- Sélectionner les véhicules qui ont plus de 400 km d'autonomie
 SELECT id, marque, modele, energie, autonomie_km, etat, localisation
 FROM vehicule
 WHERE autonomie_km > 400;
