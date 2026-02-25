@@ -1,9 +1,11 @@
+-- Trouver les 3 véhicules les plus autonomes et disponibles
 SELECT *
 FROM vehicule
 WHERE etat = 'disponible'
 ORDER BY autonomie_km DESC
 LIMIT 3;
 
+-- Trouver la ville qui a le plus de véhicules disponibles
 SELECT ville, COUNT(*) AS nb_disponibles
 FROM vehicule
 WHERE etat = 'disponible'
@@ -11,12 +13,14 @@ GROUP BY ville
 ORDER BY nb_disponibles DESC
 LIMIT 1;
 
+-- Lister les clients ayant fait au moins 2 locations (Filtre après calcul)
 SELECT c.id_client, c.nom, c.prenom, COUNT(l.id_location) AS nb_locations
 FROM client c
 JOIN location l ON c.id_client = l.id_client
 GROUP BY c.id_client, c.nom, c.prenom
 HAVING COUNT(l.id_location) >= 2;
 
+-- Identifier les véhicules qui n'ont jamais été loués
 SELECT v.*
 FROM vehicule v
 LEFT JOIN location l ON v.id_vehicule = l.id_vehicule
