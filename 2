@@ -1,12 +1,15 @@
+-- Classer les véhicules par autonomie du plus grand au plus petit
 SELECT marque, modele, energie, autonomie_km
 FROM vehicule
 ORDER BY autonomie_km DESC;
 
+-- Lister les véhicules disponibles par ville, puis par marque dans l'ordre alphabétique
 SELECT localisation, marque, modele, energie
 FROM vehicule
 WHERE etat = 'Disponible'
 ORDER BY localisation ASC, marque ASC;
 
+-- Afficher la liste des clients par nom et prénom dans l'ordre alphabétique
 SELECT nom, prenom, email
 FROM client
 ORDER BY nom ASC, prenom ASC;
