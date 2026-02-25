@@ -3,11 +3,11 @@ FROM vehicule;
 
 SELECT id, marque, modele, energie, autonomie_km, localisation
 FROM vehicule
-WHERE etat = 'disponible';
+WHERE etat = 'Disponible';
 
 SELECT id, marque, modele, energie, autonomie_km, etat
 FROM vehicule
-WHERE localisation = 'Paris';
+WHERE localisation = 'Strasbourg';
 
 SELECT id, marque, modele, energie, autonomie_km, etat, localisation
 FROM vehicule
