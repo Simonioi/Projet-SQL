@@ -1,13 +1,17 @@
+-- Compter le nombre total de véhicules dans la base
 SELECT COUNT(*) AS total_vehicules
 FROM vehicule;
 
+-- Afficher le nombre de véhicules par ville
 SELECT ville, COUNT(*) AS nb_vehicules
 FROM vehicule
 GROUP BY ville;
 
+-- Calculer l'autonomie moyenne de tous les véhicules
 SELECT AVG(autonomie_km) AS autonomie_moyenne
 FROM vehicule;
 
+-- Compter le nombre de locations effectuées pour chaque client
 SELECT c.id_client, c.nom, c.prenom, COUNT(l.id_location) AS nb_locations
 FROM client c
 LEFT JOIN location l ON c.id_client = l.id_client
