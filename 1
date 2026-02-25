@@ -1,14 +1,14 @@
-SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat, ville
+SELECT id, marque, modele, energie, autonomie_km, etat, localisation
 FROM vehicule;
 
-SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, ville
+SELECT id, marque, modele, energie, autonomie_km, localisation
 FROM vehicule
 WHERE etat = 'disponible';
 
-SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat
+SELECT id, marque, modele, energie, autonomie_km, etat
 FROM vehicule
-WHERE ville = 'Paris';
+WHERE localisation = 'Paris';
 
-SELECT id_vehicule, marque, modele, type_vehicule, autonomie_km, etat, ville
+SELECT id, marque, modele, energie, autonomie_km, etat, localisation
 FROM vehicule
 WHERE autonomie_km > 400;

@@ -1,11 +1,11 @@
-SELECT marque, modele, type_vehicule, autonomie_km
+SELECT marque, modele, energie, autonomie_km
 FROM vehicule
 ORDER BY autonomie_km DESC;
 
-SELECT ville, marque, modele, type_vehicule
+SELECT localisation, marque, modele, energie
 FROM vehicule
 WHERE etat = 'disponible'
-ORDER BY ville ASC, marque ASC;
+ORDER BY localisation ASC, marque ASC;
 
 SELECT nom, prenom, email
 FROM client
